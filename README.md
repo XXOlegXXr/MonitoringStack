@@ -1,4 +1,4 @@
-#Monitoring Stack (Prometheus, Grafana, Alertmanager & Telegram)
+# Monitoring Stack (Prometheus, Grafana, Alertmanager & Telegram)
 
 This project is ready solution for monotoring as by infrastructure, servers metrics, services, visualisate data from service using promQL, automating push
  alert in Telegram group.The stack is containerized via Docker Compsoe
@@ -63,7 +63,6 @@ Alertmanager: <http://localhost:9093>
 curl -X POST http://localhost:8000/add/alerts \
   -d "urls=tgram://${TELEGRAM_BOT_TOKEN}/${TELEGRAM_CHAT_ID}/"
 
-# BOT: @oleg_monitoring_alerts_bot
 ```
 
 <img width="1229" height="934" alt="Знімок екрана 2026-06-23 212103" src="https://github.com/user-attachments/assets/036f454b-028f-4f1e-8417-2cdcdb27c6e7" />
@@ -75,5 +74,5 @@ curl -X POST http://localhost:8000/add/alerts \
 <img width="1918" height="966" alt="Знімок екрана 2026-06-23 212458" src="https://github.com/user-attachments/assets/abb0d2ca-217a-4023-bc3d-4af27c0de55b" />
 
 
-
+# BOT: @oleg_monitoring_alerts_bot
 
