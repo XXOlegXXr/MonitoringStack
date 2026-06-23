@@ -63,4 +63,17 @@ Alertmanager: <http://localhost:9093>
 curl -X POST http://localhost:8000/add/alerts \
   -d "urls=tgram://${TELEGRAM_BOT_TOKEN}/${TELEGRAM_CHAT_ID}/"
 
+# BOT: @oleg_monitoring_alerts_bot
+
+
+<img width="1229" height="934" alt="Знімок екрана 2026-06-23 212103" src="https://github.com/user-attachments/assets/036f454b-028f-4f1e-8417-2cdcdb27c6e7" />
+
+<img width="1919" height="908" alt="Знімок екрана 2026-06-23 212308" src="https://github.com/user-attachments/assets/8b182a6f-28db-4b3f-bd8d-f4bc27631d80" />
+
+<img width="1919" height="926" alt="Знімок екрана 2026-06-23 212430" src="https://github.com/user-attachments/assets/8b515520-1408-4690-bbb3-59fc10a11383" />
+
+<img width="1918" height="966" alt="Знімок екрана 2026-06-23 212458" src="https://github.com/user-attachments/assets/abb0d2ca-217a-4023-bc3d-4af27c0de55b" />
+
+
+
 
