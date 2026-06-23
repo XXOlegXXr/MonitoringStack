@@ -64,7 +64,7 @@ curl -X POST http://localhost:8000/add/alerts \
   -d "urls=tgram://${TELEGRAM_BOT_TOKEN}/${TELEGRAM_CHAT_ID}/"
 
 # BOT: @oleg_monitoring_alerts_bot
-
+```
 
 <img width="1229" height="934" alt="Знімок екрана 2026-06-23 212103" src="https://github.com/user-attachments/assets/036f454b-028f-4f1e-8417-2cdcdb27c6e7" />
 
