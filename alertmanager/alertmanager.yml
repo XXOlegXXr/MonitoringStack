@@ -3,10 +3,10 @@ route:
   group_by: ['alertname']
   group_wait: 10s
   group_interval: 1m
-  repeat_interval: 1h
+  repeat_interval: 3m
 
 receivers:
   - name: 'telegram'
     webhook_configs:
-      - url: 'http://telegram-relay:8000/notify/alerts'
+      - url: 'http://telegram-relay:8000/webhook'
         send_resolved: true

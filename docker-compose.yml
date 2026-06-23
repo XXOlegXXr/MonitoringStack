@@ -56,17 +56,17 @@ services:
       - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
     networks:
       - monitoring
+
   telegram-relay:
-    image: caronc/apprise:latest
+    build: ./telegram-relay
     container_name: telegram-relay
     restart: unless-stopped
-    ports:
-      - "8000:8000"
     environment:
-      - APPRISE_STATEFUL_MODE=simple
-      - APPRISE_CONFIG_LOCK=no
+      - TELEGRAM_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
     networks:
       - monitoring
+
 
 networks:
   monitoring:
