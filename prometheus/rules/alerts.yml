@@ -1,0 +1,12 @@
+groups:
+  - name: server_alerts
+    rules:
+
+      - alert: HighCPU
+        expr: 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) < 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU перевантажений на {{ $labels.instance }}"
+          description: "CPU usage = {{ $value}}% протягом 2+ хвилин"

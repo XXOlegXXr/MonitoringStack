@@ -46,6 +46,27 @@ services:
      - grafana_data:/var/lib/grafana
     networks:
      - monitoring
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    restart: unless-stopped
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    networks:
+      - monitoring
+  telegram-relay:
+    image: caronc/apprise:latest
+    container_name: telegram-relay
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APPRISE_STATEFUL_MODE=simple
+      - APPRISE_CONFIG_LOCK=no
+    networks:
+      - monitoring
 
 networks:
   monitoring:
